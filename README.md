@@ -11,7 +11,7 @@ This repository is an [atopile](https://atopile.io/) module for the ESP32-C3-MIN
 
 ## 🏁 Get started
 ### Installation
-From inside a project directory terminal: `ato install esp32c3`
+From inside a project directory terminal: `ato install esp32c3-ato`
 
 ### Code
 ```Go
