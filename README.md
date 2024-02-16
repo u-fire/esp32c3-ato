@@ -15,7 +15,7 @@ From inside a project directory terminal: `ato install esp32c3-ato`
 
 ### Code
 ```Go
-import ESP32C3 from "esp32c3/esp32c3.ato"
+import ESP32C3 from "esp32c3-ato/esp32c3.ato"
 import Power from "generics/interfaces.ato"
 import UART from "generics/interfaces.ato"
 import USB2 from "generics/interfaces.ato"
