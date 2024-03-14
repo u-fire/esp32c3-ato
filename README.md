@@ -2,8 +2,8 @@
 
 📒 [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1_datasheet_en.pdf)
 
-This repository is an [atopile](https://atopile.io/) module for the ESP32-C3-MINI-1U-N4, a system-on-chip ESP32 WiFi/BLE chip. 
-- external antenna connector
+This repository is an [atopile](https://atopile.io/) module for the ESP32-C3-MINI-*, a system-on-chip ESP32 WiFi/BLE chip. 
+- external antenna connector (ESP32-C3-MINI-1U-N4) or PCB antenna (ESP32-C3-MINI-1-N4)
 - RISC­V single­core microprocessor
 - 4 MB flash in chip package
 - 15 GPIOs

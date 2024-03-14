@@ -4,12 +4,13 @@
     Released under CERN-OHL-P v2
     Date: 2/15/2024
 """
-from "elec/src/ESP32-C3-MINI-1U-N4.ato" import ESP32_C3_MINI_1U_N4
+from "elec/src/ESP32-C3-MINI-1U-N4.ato" import ESP32_C3_MINI_1U_N4  # external antenna
+from "elec/src/ESP32-C3-MINI-1-N4.ato" import ESP32_C3_MINI_1_N4    # pcb antenna
 from "generics/resistors.ato" import Resistor
 from "generics/capacitors.ato" import Capacitor
 from "generics/interfaces.ato" import UART, Power, USB2
 
-module ESP32C3:
+module _ESP32C3:
     power = new Power
     esp32c3 = new ESP32_C3_MINI_1U_N4
     signal IO0 ~ esp32c3.IO0
@@ -83,4 +84,11 @@ module ESP32C3:
     uart = new UART
     uart.tx ~ esp32c3.TXD0
     uart.rx ~ esp32c3.RXD0
-    uart.gnd ~ power.gnd
+    uart.gnd ~ power.gnd  
+
+
+module ESP32C3_EXT_ANT from _ESP32C3:
+    esp32c3 -> ESP32_C3_MINI_1U_N4
+
+module ESP32C3_PCB_ANT from _ESP32C3:
+    esp32c3 -> ESP32_C3_MINI_1_N4

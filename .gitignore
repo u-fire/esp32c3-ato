@@ -29,7 +29,7 @@ fp-info-cache
 *.xml
 *.csv
 
-build/
+build*/
 .DS_Store
 
 # Virtual environment
