@@ -14,21 +14,31 @@ This repository is an [atopile](https://atopile.io/) module for the ESP32-C3-MIN
 From inside a project directory terminal: `ato install esp32c3-ato`
 
 ### Code
-```Go
-import ESP32C3 from "esp32c3-ato/esp32c3.ato"
-import Power from "generics/interfaces.ato"
-import UART from "generics/interfaces.ato"
-import USB2 from "generics/interfaces.ato"
+```ato
+from "esp32c3-ato/esp32c3.ato" import ESP32C3_EXT_ANT
+# - or -
+from "esp32c3-ato/esp32c3.ato" import ESP32C3_PCB_ANT
 
-module Test:
-    esp = new ESP32C3
+from "generics/interfaces.ato" import Power
+from "generics/interfaces.ato" import UART
+from "generics/interfaces.ato" import USB2
+
+module Esp:
     vdd3v3 = new Power
     uart = new UART
     usb = new USB2
 
-    esp.power ~ vdd3v3
-    esp.uart ~ uart
-    esp.usb ~ usb
+    esp_ext = new ESP32C3_EXT_ANT   # external antenna connector
+    esp_ext.power ~ vdd3v3
+    esp_ext.uart ~ uart
+    esp_ext.usb ~ usb
+
+    # - or -
+    
+    esp_pcb = new ESP32C3_PCB_ANT   # PCB antenna
+    esp_pcb.power ~ vdd3v3
+    esp_pcb.uart ~ uart
+    esp_pcb.usb ~ usb
 ```
 *GPIO pins are available as IO0 - IO19*
 
