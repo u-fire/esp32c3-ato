@@ -16,6 +16,7 @@ module _ESP32C3:
     signal IO0 ~ esp32c3.IO0
     signal IO1 ~ esp32c3.IO1
     signal IO10 ~ esp32c3.IO10
+    signal IO3 ~ esp32c3.IO3
     signal IO4 ~ esp32c3.IO4
     signal IO5 ~ esp32c3.IO5
     signal IO6 ~ esp32c3.IO6
