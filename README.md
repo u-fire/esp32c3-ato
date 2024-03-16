@@ -14,7 +14,7 @@ This repository is an [atopile](https://atopile.io/) module for the ESP32-C3-MIN
 From inside a project directory terminal: `ato install esp32c3-ato`
 
 ### Code
-```ato
+```vb
 from "esp32c3-ato/esp32c3.ato" import ESP32C3_EXT_ANT
 # - or -
 from "esp32c3-ato/esp32c3.ato" import ESP32C3_PCB_ANT
@@ -56,11 +56,11 @@ You'll need a USB breakout board or other means to access the cables and a 3.3 v
 |-------:|:-:|:---:|:-:|:---|
 | ESP.D+ 🟨|~| 🟨 USB.D+||
 | ESP.D- 🟦|~| 🟦 USB.D-||
-| *ESP.VCC* 🟥|~|~|~|🟥 *3V3.VCC*|
+| *ESP.VCC* 🟥|~||~|🟥 *3V3.VCC*|
 |**ESP.GND**⬛ |~| ⬛ **USB.GND** ⬛|~|⬛ **3V3.GND**|
 
 ### Procedure
-1. Reset the chip while holding IO9 LOW.
+1. Reset the chip while IO9 is LOW.
     - a reset can be accomplished by a power-cycle, or bringing the EN pin LOW then HIGH
 2. Upload the firmware
 3. Return IO9 to its default HIGH state
@@ -78,7 +78,6 @@ You'll need a USB breakout board or other means to access the cables and a 3.3 v
 platform = espressif32
 board = esp32-c3-devkitm-1
 ```
-*use `USBSerial` instead of `Serial` if using the same USB cable as you did for firmware upload*
 
 ## 🙏 Contributing
 This design is intended to be a community best-effort at a minimal circuit combining:
