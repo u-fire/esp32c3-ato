@@ -48,7 +48,7 @@ This is a minimal circuit:
 - there's no crystal in this design, it is required for light-sleep mode
 
 ## ⚡ Programming
-The ESP32-C3 can have firmware uploaded with just a USB cable. No additional hardware is required, although this method *isn't the best approach a smooth development experience.*
+The ESP32-C3 can have firmware uploaded with just a USB cable. No additional hardware is required, although this method *isn't the best approach for a smooth development experience.*
 ### Connections
 You'll need a USB breakout board or other means to access the cables and a 3.3 volt power source, not the 5 volt USB line. Tie all grounds together. 
 
